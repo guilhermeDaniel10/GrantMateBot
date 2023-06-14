@@ -1,0 +1,11 @@
+Enter kafka container:
+docker exec -it kafka /bin/bash
+
+Kafka list topics:
+kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+Kafka delete topcis:
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic 1677660621051_pdf-test.pdf
+
+Delete topics that end in txt:
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic '.*\.txt$'

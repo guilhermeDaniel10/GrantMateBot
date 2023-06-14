@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  file-storage:
+    container_name: shared-file-storage
+    volumes:
+      - data:/data
+
+volumes:
+  data:
+    driver: local

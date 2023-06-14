@@ -1,0 +1,34 @@
+version: '3.0'
+services:
+  grantmate-database:
+    container_name: grantmate-database
+    image: mysql:8.0.23
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - 3838:3306
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - grantmate_network
+  adminer:
+    container_name: grantmate-adminer
+    image: adminer
+    restart: always
+    ports:
+      - 6789:8080
+    links:
+      - grantmate-database
+    networks:
+      - grantmate_network
+volumes:
+  file-storage:
+  db-data:
+  grantmate-ui:
+networks:
+  grantmate_network:
+    driver: bridge

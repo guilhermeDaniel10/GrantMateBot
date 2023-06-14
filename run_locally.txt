@@ -1,0 +1,4 @@
+Run locally:
+
+node: npm run local
+angular: npm run local

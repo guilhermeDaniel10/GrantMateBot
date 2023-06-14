@@ -1,0 +1,73 @@
+version: '3.0'
+services:
+  grantmate-api:
+    container_name: grantmate-api
+    build:
+      context: ./GrantMateAPI
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - grantmate-database
+    volumes:
+      - ./GrantMateAPI/src:/usr/app/src
+      - file-storage:/usr/app/file-storage
+    ports:
+      - 3311:3000
+    networks:
+      - grantmate_network
+  grantmate-ui:
+    container_name: grantmate-ui
+    build:
+      context: ./GrantMateUI
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+        - ./GrantMateUI/src:/usr/ui/src
+    ports:
+      - 5413:4200
+    networks:
+      - grantmate_network
+  grantmate-database:
+    container_name: grantmate-database
+    image: mysql:8.0.23
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - 3838:3306
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - grantmate_network
+  adminer:
+    container_name: grantmate-adminer
+    image: adminer
+    restart: always
+    ports:
+      - 6789:8080
+    links:
+      - grantmate-database
+    networks:
+      - grantmate_network
+  aibot:
+    container_name: aibot
+    build:
+      context: ./AIBot
+      dockerfile: Dockerfile
+    volumes:
+      - ./AIBot:/usr/aibot
+      - file-storage:/usr/aibot/file-storage
+    restart: always
+    ports:
+      - 3312:5000
+    networks:
+      - grantmate_network
+volumes:
+  file-storage:
+  db-data:
+  grantmate-ui:
+networks:
+  grantmate_network:

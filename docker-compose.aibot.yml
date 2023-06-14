@@ -1,0 +1,21 @@
+version: '3.0'
+services:
+  aibot:
+    container_name: aibot
+    build:
+      context: ./AIBot
+      dockerfile: Dockerfile
+    volumes:
+      - ./AIBot:/usr/aibot
+      - grantmate_file-storage:/usr/aibot/file-storage
+    restart: always
+    ports:
+      - 3312:5000
+    networks:
+      - grantmate_grantmate_network
+volumes:
+  grantmate_file-storage:
+    external: true
+networks:
+  grantmate_grantmate_network:
+    external: true
