@@ -1,0 +1,140 @@
+<mat-card>
+  <mat-card-content>
+    <div class="flex-container">
+      <div>
+        <p class="title">
+          <b>Documento:</b>
+        </p>
+      </div>
+
+      <div class="block-button-container">
+        <button
+          class="block-button reset-button"
+          mat-stroked-button
+          color="warn"
+          (click)="resetSelections()"
+        >
+          Repor
+        </button>
+        <button
+          class="block-button"
+          mat-stroked-button
+          color="primary"
+          (click)="onBlockSelectedNumericEvent()"
+        >
+          Bloquear
+        </button>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="following-words-container">
+        <label class="expand-title-label" for="expand-title"
+          >Linhas a adicionar ao título:</label
+        >
+        <input
+          id="expand-title"
+          name="expand-title"
+          class="expand-title-input"
+          type="number"
+          matInput
+          (keydown)="(false)"
+          [(ngModel)]="numberOfLinesToAddToTitle"
+          (change)="changeTitleHighlight()"
+          min="0"
+        />
+        <label class="following-lines-label" for="followinglines"
+          >Linhas a selecionar depois do tópico:</label
+        >
+        <input
+          id="followinglines"
+          name="followinglines"
+          class="following-lines-input"
+          type="number"
+          matInput
+          (keydown)="(false)"
+          [(ngModel)]="numberOfFollowingLines"
+          (change)="changeParagraphHighlight()"
+          min="0"
+        />
+      </div>
+      <div class="topic-search">
+        <!--<mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Tópico</mat-label>
+          <input
+            [(ngModel)]="searchTerm"
+            matInput
+            placeholder="Ex. SMART Objectives"
+          />
+        </mat-form-field>
+        <button
+          mat-icon-button
+          class="search-button"
+          (click)="changeHighlightText()"
+        >
+          <mat-icon>search</mat-icon>
+        </button>-->
+
+        <button
+          mat-icon-button
+          (click)="scrollToPreviousFoundValue()"
+          [ngClass]="{ 'low-opacity': currentSearchTermIndex <= 0 }"
+        >
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          (click)="scrollToNextFoundValue()"
+          [ngClass]="{
+            'low-opacity':
+              currentSearchTermIndex == foundIndexes.length - 1 ||
+              currentSearchTermIndex == -1
+          }"
+        >
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <div
+        #selectionZone
+        id="selectionZone"
+        class="selection-zone"
+        (textSelect)="renderRectangles($event)"
+      >
+        <div id="text-zone" *ngFor="let line of textAsArray; let i = index">
+          <!--<span
+            [id]="'highlight-' + i"
+            [innerHTML]="line.content | highlightSearch : [textToHighlight]"
+          ></span>-->
+          <span
+            [id]="'highlight-' + i"
+            [ngClass]="{
+              'highlight-as-heading': line.foudHighlight == true,
+              'highlight-as-paragraph': line.followingHighlight == true
+            }"
+            >{{ line.content }}</span
+          >
+          <br />
+        </div>
+
+        <div
+          *ngIf="hostRectangle"
+          class="indicator"
+          [style.left.px]="hostRectangle.left"
+          [style.top.px]="hostRectangle.top"
+          [style.width.px]="hostRectangle.width"
+          [style.height.px]="0"
+        >
+          <div class="indicator__cta">
+            <a
+              (mousedown)="$event.preventDefault()"
+              (mouseup)="$event.stopPropagation(); shareSelection()"
+              class="indicator__cta-link"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

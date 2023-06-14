@@ -1,0 +1,17 @@
+<div class="chat-bot-container" #scrollContainer>
+  <div
+    #target
+    *ngFor="let message of chatMessages; let i = index"
+    [attr.id]="'message-' + i"
+  >
+    <app-chat-bot-message
+      [message]="currentChatMessage"
+      (dropdownSelectionEvent)="onDropdownSelectionChange($event)"
+      (openFieldEvent)="onOpenFieldSubmit($event)"
+      (decisionButtonEvent)="onDecisionButtonEvent($event)"
+      (messageFullyRendered)="onMessageFullyRendered()"
+      (submitSelectedInfo)="onSubmitSelectedInfo($event)"
+      (submitCustomTextEvent)="onSubmitCustomText($event)"
+    ></app-chat-bot-message>
+  </div>
+</div>

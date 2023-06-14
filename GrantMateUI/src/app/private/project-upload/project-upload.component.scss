@@ -1,0 +1,89 @@
+h3 {
+  color: white !important;
+}
+
+p {
+  color: var(--secondary-color) !important;
+}
+
+.file-upload {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.type-of-proposal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.type-of-proposal-selection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.type-of-proposal-component {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+.file-upload-component {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.keyboard-details {
+  display: flex;
+  justify-content: center;
+}
+
+.shortcurts-title {
+  width: 100%;
+}
+.keyboard-details-card {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 75%;
+  padding: 15px;
+}
+
+.selection-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+  height: 15rem;
+  margin-bottom: 150px;
+}
+
+.text-selection-component {
+  width: 75%;
+}
+
+.text-selection-container {
+  display: flex;
+  justify-content: center;
+}
+
+.saved-section {
+  display: flex;
+  justify-content: center;
+}
+
+.saved-section-card {
+  width: 75%;
+}
+
+.full-selection-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

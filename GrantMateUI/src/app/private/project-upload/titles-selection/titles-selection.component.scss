@@ -1,0 +1,93 @@
+.main-card {
+  height: 100vh;
+}
+
+.card-content {
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.topic-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.low-opacity {
+  opacity: 0.4;
+  box-shadow: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.simple-highlight {
+  background-color: yellow;
+}
+
+.topic-search {
+  display: flex;
+}
+
+.search-button {
+  display: flex;
+  align-items: flex-start;
+}
+
+.arrow-container {
+  flex: 1;
+  text-align: end;
+}
+.selection-zone {
+  overflow-y: auto;
+  height: 100%;
+  padding: 10px;
+}
+
+.selected-text::before {
+  content: "SELECTED: ";
+  font-weight: bold;
+}
+
+.H1,
+.H2,
+.H3,
+.H4,
+.H5,
+.H6,
+.P {
+  color: red;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.title-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(255, 176, 255);
+}
+
+.title-h2 {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 170);
+}
+
+.title-h3 {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(173, 255, 173);
+}
+
+.paragraph {
+  background-color: rgb(211, 211, 211);
+}
+
+.trash {
+  display: none;
+}

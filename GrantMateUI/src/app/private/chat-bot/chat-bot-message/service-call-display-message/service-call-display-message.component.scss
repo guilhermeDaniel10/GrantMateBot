@@ -1,0 +1,22 @@
+.checkbox-container {
+  text-align: end;
+}
+
+.checkbox-input:hover {
+  cursor: pointer;
+}
+.highlighted {
+  color: #00a4a9;
+}
+
+.unhighlight {
+  color: var(--primary-color);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.selected-text-button-container {
+  margin-top: 15px;
+}

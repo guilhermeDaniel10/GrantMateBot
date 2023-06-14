@@ -1,0 +1,21 @@
+<div class="flex-container">
+  <div class="button-container">
+    <button class="new-conversation-button" mat-raised-button color="primary">
+      <b class="button-title">+ New Conversation</b>
+    </button>
+  </div>
+  <div class="history-list-container">
+    <div
+      class="conversation-item"
+      *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]"
+    >
+      <span class="conversation-text"> Conversation {{ i }} </span>
+    </div>
+  </div>
+  <div class="copyright-info">
+    <span class="copyright-span"
+      >Copyright <mat-icon class="copyright-icon">copyright</mat-icon> 2023
+      Inova+</span
+    >
+  </div>
+</div>

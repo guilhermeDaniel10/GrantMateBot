@@ -1,0 +1,56 @@
+<button (click)="hierarchizeText()">Teste</button>
+<mat-card class="main-card">
+  <mat-card-content class="card-content">
+    <div class="flex-container">
+      <div class="topic-container">
+        <div class="arrow-container">
+          <button
+            (click)="scrollToPreviousFoundValue()"
+            [ngClass]="{ 'low-opacity': currentSearchTermIndex <= 0 }"
+            mat-icon-button
+          >
+            <mat-icon>arrow_back_ios</mat-icon>
+          </button>
+          <button
+            (click)="scrollToNextFoundValue()"
+            [ngClass]="{
+              'low-opacity':
+                currentSearchTermIndex == foundIndexes.length - 1 ||
+                currentSearchTermIndex == -1
+            }"
+            mat-icon-button
+          >
+            <mat-icon>arrow_forward_ios</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="radio-container">
+        <app-tag-radio-selection
+          (tagSelectionChange)="onTagSelectionChange($event)"
+        ></app-tag-radio-selection>
+      </div>
+      <div
+        #selectionZone
+        class="selection-zone"
+        (mouseup)="onMouseUp($event)"
+        (mousedown)="onMouseDown($event)"
+      >
+        <div *ngFor="let item of textWithTags; let i = index">
+          <p
+            [id]="'content-' + i"
+            [ngClass]="{
+              'title-h1': item.tag === 'H1',
+              'title-h2': item.tag === 'H2',
+              'title-h3': item.tag === 'H3',
+              'paragraph': item.tag === 'P',
+              'simple-highlight': item.simpleHighlight === true,
+              'trash': item.tag === 'LIXO',
+            }"
+          >
+            {{ item.content }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,156 @@
+{
+  "messageRelations": [
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "GREETING",
+      "nextPredefinedMessageNameId": "PURPOSE_SELECTION"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "PURPOSE_SELECTION_DROPDOWN_GENERATE_TEXT",
+      "nextPredefinedMessageNameId": "PURPOSE_SELECTION_GENERATE_TEXT_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "PURPOSE_SELECTION_GENERATE_TEXT_MESSAGE",
+      "nextPredefinedMessageNameId": "TYPE_OF_PROPOSAL_SELECTION"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN_EUROSTARS",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_EUROSTARS"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN_HORIZON",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TYPE_OF_PROPOSAL_SELECTION_EUROSTARS_MESSAGE",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_EUROSTARS"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TYPE_OF_PROPOSAL_SELECTION_HORIZON_MESSAGE",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_EUROSTARS",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_EXCELLENCE",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_EXCELLENCE"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_IMPACT",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_IMPACT"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_IMPLEMENTATION",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_IMPLEMENTATION"
+    },
+    {
+      "currentPredefinedMessageType": "DROPDOWN_SELECTION_VALUE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_NONE",
+      "nextPredefinedMessageNameId": "INSPIRING_PROPOSAL_INPUT"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_EXCELLENCE",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_IMPACT",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_HORIZON_IMPLEMENTATION",
+      "nextPredefinedMessageNameId": "TOPIC_SELECTION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "TOPIC_SELECTION_MESSAGE",
+      "nextPredefinedMessageNameId": "INSPIRING_PROPOSAL_INPUT"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "INSPIRING_PROPOSAL_INPUT",
+      "nextPredefinedMessageNameId": "INSPIRING_PROPOSAL_INPUT_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "INSPIRING_PROPOSAL_INPUT_MESSAGE",
+      "nextPredefinedMessageNameId": "FIND_RELEVANT_INFORMATION"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "FIND_RELEVANT_INFORMATION",
+      "nextPredefinedMessageNameId": "FIND_RELEVANT_INFORMATION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "FIND_RELEVANT_INFORMATION_MESSAGE",
+      "nextPredefinedMessageNameId": "CUSTOMIZABLE_RELEVANT_INFORMATION_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageTypeOnCancel": "SIMPLE",
+      "currentPredefinedMessageNameId": "CUSTOMIZABLE_RELEVANT_INFORMATION_MESSAGE",
+      "nextPredefinedMessageNameId": "CUSTOMIZABLE_SELECTED_TOPIC_INPUT",
+      "nextPredefinedMessageNameIdOnCancel": "THEME_INPUT"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "CUSTOMIZABLE_SELECTED_TOPIC_INPUT",
+      "nextPredefinedMessageNameId": "CUSTOMIZABLE_SELECTED_TOPIC_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "CUSTOMIZABLE_SELECTED_TOPIC_MESSAGE",
+      "nextPredefinedMessageNameId": "THEME_INPUT"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "THEME_INPUT",
+      "nextPredefinedMessageNameId": "THEME_MESSAGE"
+    },
+    {
+      "currentPredefinedMessageType": "SIMPLE",
+      "nextPredefinedMessageType": "SIMPLE",
+      "currentPredefinedMessageNameId": "THEME_MESSAGE",
+      "nextPredefinedMessageNameId": "GENERATE_TEXT_FULL_MESSAGE"
+    }
+  ]
+}

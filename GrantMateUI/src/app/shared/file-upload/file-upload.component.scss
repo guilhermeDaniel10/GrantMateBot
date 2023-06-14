@@ -1,0 +1,52 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.file-upload-card {
+  width: 75%;
+}
+
+.file-upload-container {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.file-upload-button {
+  color: var(--primary-color) !important;
+}
+
+.file-upload-button {
+  background-color: white;
+}
+
+.only-file-upload-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.upload-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filename {
+  align-self: center;
+}
+.upload-button {
+  background-color: var(--sucess) !important;
+  color: white !important;
+}
+
+.loading-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "typeface-roboto";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+  min-height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+}
+
+app-root {
+  display: block;
+  height: 100%;
+  // overflow-y: hidden;
+}
+.xx-small {
+  font-size: 8px !important;
+}
+
+.x-small {
+  font-size: 10px !important;
+}
+
+.small {
+  font-size: 12px !important;
+}
+
+.medium {
+  font-size: 16px !important;
+}
+
+.large {
+  font-size: 24px !important;
+}
+
+.highlight {
+  background-color: violet;
+  font-weight: bold;
+}
+
+.submit-button-bot {
+  border: none;
+  width: 90px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  padding: 5px;
+  &:hover {
+    background-color: var(--primary-hover-color);
+  }
+}
+
+.submit-button-bot:active {
+  opacity: 0.3;
+  color: white;
+}
+
+$light-gray: #e8ecee;
+$primary-color: #425b76;
+$secondary-color: #eaeff6;
+$tertiary-color: #eaeff6;
+$very-light-gray: #d9d9d9;
+
+h3,
+p {
+  color: var(--primary-color);
+}
+
+:root {
+  --light-gray: #e8ecee;
+  --primary-color: #425b76;
+  --secondary-color: #eaeff6;
+  --tertiary-color: #eaeff6;
+  --quaternary-color: #656c72;
+  --very-light-gray: #f7f7f7;
+  --primary-hover-color: #6c7888;
+  --warning: #f44a3e;
+  --sucess: rgb(42, 191, 77);
+  --field-color: #ced2d8;
+}

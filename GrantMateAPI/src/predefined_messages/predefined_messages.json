@@ -1,0 +1,143 @@
+{
+  "predefinedMessages": [
+    {
+      "nameId": "GREETING",
+      "content": "Hi! I'm GrantMate, your project proposal assistant!",
+      "fromBot": true
+    },
+    {
+      "nameId": "PURPOSE_SELECTION",
+      "content": "Can you tell me exactly what you're looking for?",
+      "fromBot": true,
+      "dropdownNameId": "PURPOSE_SELECTION_DROPDOWN"
+    },
+    {
+      "nameId": "PURPOSE_SELECTION_GENERATE_TEXT_MESSAGE",
+      "content": "Generate text based on existing topics.",
+      "fromBot": false
+    },
+    {
+      "nameId": "PURPOSE_SELECTION_QUERY_TOPICS_MESSAGE",
+      "content": "Query topics based on keywords.",
+      "fromBot": false
+    },
+    {
+      "nameId": "PURPOSE_SELECTION_OPEN_TEXT_MESSAGE",
+      "content": "Open text.",
+      "fromBot": false
+    },
+    {
+      "nameId": "TYPE_OF_PROPOSAL_SELECTION",
+      "content": "In which type of proposal do you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN"
+    },
+    {
+      "nameId": "TYPE_OF_PROPOSAL_SELECTION_EUROSTARS_MESSAGE",
+      "content": "Eurostars.",
+      "fromBot": false
+    },
+    {
+      "nameId": "TYPE_OF_PROPOSAL_SELECTION_HORIZON_MESSAGE",
+      "content": "Horizon.",
+      "fromBot": false
+    },
+    {
+      "nameId": "TOPIC_SELECTION_EUROSTARS",
+      "content": "In which of this Eurostars topics to you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TOPIC_SELECTION_EUROSTARS_DROPDOWN"
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON",
+      "content": "In which of this Horizon topics to you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TOPIC_SELECTION_HORIZON_DROPDOWN"
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_EXCELLENCE",
+      "content": "In which of this Excellence sections to you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TOPIC_SELECTION_HORIZON_EXCELLENCE_DROPDOWN"
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_IMPACT",
+      "content": "In which of this Impact sections to you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TOPIC_SELECTION_HORIZON_IMPACT_DROPDOWN"
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_IMPLEMENTATION",
+      "content": "In which of this Implementation sections to you want your text to be generated?",
+      "fromBot": true,
+      "dropdownNameId": "TOPIC_SELECTION_HORIZON_IMPLEMENTATION_DROPDOWN"
+    },
+    {
+      "nameId": "TOPIC_SELECTION_MESSAGE",
+      "content": "Do you want to generate text for the topic {{TOPIC}}?",
+      "fromBot": false
+    },
+    {
+      "nameId": "INSPIRING_PROPOSAL_INPUT",
+      "content": "Are there any specific terms or phrases you would like the text to revolve around? This could include project acronyms, topic details, or any other relevant keywords. Please provide any specific terms you have in mind, and I will conduct a search to find text that is related to those keywords.",
+      "fromBot": true,
+      "openField": true
+    },
+    {
+      "nameId": "INSPIRING_PROPOSAL_INPUT_MESSAGE",
+      "content": "Are these the keywords you want to base your text on? <br><b>{{KEYWORDS}}</b>",
+      "fromBot": false
+    },
+    {
+      "nameId": "FIND_RELEVANT_INFORMATION",
+      "content": "Alright! This is what I found about the type of proposal <b>{{PROPOSAL_TYPE}}</b>, regarding the topic <b>{{TOPIC}}</b> with the keywords <b>{{KEYWORDS}}</b>",
+      "fromBot": true
+    },
+    {
+      "nameId": "FIND_RELEVANT_INFORMATION_MESSAGE",
+      "content": "{{SERVICE_CALL}}",
+      "fromBot": true,
+      "serviceCallNameId": "FIND_RELEVANT_INFORMATION_K_SEARCH",
+      "selectable": true
+    },
+    {
+      "nameId": "CUSTOMIZABLE_RELEVANT_INFORMATION_MESSAGE",
+      "content": "Do you want to customize the information I found before I generate new text?",
+      "fromBot": false,
+      "canCancel": true
+    },
+    {
+      "nameId": "CUSTOMIZABLE_SELECTED_TOPIC_INPUT",
+      "content": "Alright. Please customize the following text to fit your standards: <br> {{custom}}{{SELECTED_INFORMATION}}{{custom}}",
+      "fromBot": true,
+      "customizable": true
+    },
+    {
+      "nameId": "CUSTOMIZABLE_SELECTED_TOPIC_MESSAGE",
+      "content": "<b>Is this the topic that you want to use as a sample?</b> <br><br>{{SELECTED_INFORMATION}}",
+      "fromBot": false
+    },
+    {
+      "nameId": "THEME_INPUT",
+      "content": "What is the theme of the text you want to generate?",
+      "fromBot": true,
+      "openField": true
+    },
+    {
+      "nameId": "THEME_MESSAGE",
+      "content": "Do you want to generate text about the theme '{{THEME}}'?",
+      "fromBot": false
+    },
+    {
+      "nameId": "GENERATE_TEXT_FULL_MESSAGE",
+      "content": "<b>Alright! I generated some text that might be interesting to you:</b>",
+      "serviceCallNameId": "TEXT_GENERATION_OPENAI",
+      "fromBot": true
+    },
+    {
+      "nameId": "NO_RELEVANT_INFORMATION_MESSAGE",
+      "content": "I'm sorry, I couldn't find any relevant information.",
+      "fromBot": true
+    }
+  ]
+}

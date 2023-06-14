@@ -1,0 +1,42 @@
+<mat-card class="card-selection">
+  <div class="small"><h3>Filtro de tópicos</h3></div>
+  <div class="selection-component">
+    <div class="proposal-selection-container">
+      <mat-form-field class="proposal-selection" appearance="outline">
+        <mat-label>Tipo de Proposta</mat-label>
+        <mat-select
+          [(ngModel)]="selectedTypeOfProposal"
+          (ngModelChange)="onTypeOfProposalSelectionChange($event)"
+          [ngModelOptions]="{ standalone: true }"
+          name="typeOfProposal"
+        >
+          <mat-option
+            *ngFor="let typeOfProposal of typeOfProposals"
+            [value]="typeOfProposal.value"
+          >
+            {{ typeOfProposal.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="sections; then sectionSelection"></div>
+  </div>
+</mat-card>
+
+<ng-template #sectionSelection>
+  <mat-form-field class="section-selection" appearance="outline">
+    <mat-label>Secções</mat-label>
+    <mat-select
+      [(ngModel)]="selectedSection"
+      [ngModelOptions]="{ standalone: true }"
+      (ngModelChange)="onSectionChange()"
+      name="sectionSelection"
+    >
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let section of sections" [value]="section">
+        {{ section }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-template>

@@ -1,0 +1,37 @@
+<div class="card-container">
+  <mat-card class="file-upload-card">
+    <div class="small file-upload-container text-center">
+      <div>
+        <h3>Upload do documento</h3>
+      </div>
+      <div class="only-file-upload-container">
+        <button
+          class="file-upload-button"
+          mat-stroked-button
+          (click)="fileSelect.click()"
+        >
+          <mat-icon>file_upload</mat-icon>Escolher Ficheiro
+        </button>
+
+        <span class="filename">{{ file?.name }}</span>
+        <input
+          class="form-control"
+          hidden
+          #fileSelect
+          type="file"
+          (change)="onChange($event)"
+        />
+      </div>
+      <div class="upload-button-container">
+        <button mat-raised-button class="upload-button" (click)="onUpload()">
+          Upload
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<!--Flag variable is used here-->
+<div class="loading-container" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>

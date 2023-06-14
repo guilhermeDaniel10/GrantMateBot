@@ -1,0 +1,27 @@
+.saved-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.saved-section-title {
+  display: flex;
+  justify-content: center;
+}
+
+.saved-section {
+  width: 75%;
+}
+.saved-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.saved-section-card {
+  width: 75%;
+}
+
+.section {
+  padding: 10px;
+}

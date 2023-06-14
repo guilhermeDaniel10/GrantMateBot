@@ -1,0 +1,16 @@
+<div class="saved-section-container">
+  <div class="saved-section-title">
+    <h3 class="saved-section">Secções Guardadas:</h3>
+  </div>
+  <div *ngFor="let section of savedSections" class="saved-section">
+    <mat-card class="saved-section-card">
+      <div class="section small">
+        <p><b>Título: </b>{{ section.heading }}</p>
+        <p><b>Corpo de Texto: </b>{{ section.paragraph }}</p>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+
+

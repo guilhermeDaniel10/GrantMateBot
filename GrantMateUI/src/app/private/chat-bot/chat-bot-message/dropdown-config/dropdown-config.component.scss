@@ -1,0 +1,38 @@
+.message-dropdown {
+  width: 90%;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 36px;
+  color: var(--primary-color);
+  border-color: var(--field-color);
+}
+
+.message-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: white;
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  height: 30px;
+  font-weight: 300;
+  transition-duration: 0.3s;
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+.button:active {
+  opacity: 0.3;
+  color: white;
+}

@@ -1,0 +1,72 @@
+<div class="file-upload">
+  <div class="keyboard-details">
+    <mat-card class="small keyboard-details-card">
+      <h3 class="shortcurts-title">Atalhos para extração:</h3>
+      <p><b>Bloquear Título:</b> Alt + T</p>
+      <p><b>Bloquear Corpo de Texto:</b> Alt + P</p>
+      <p><b>Repor Tudo:</b> Alt + Backspace</p>
+      <p><b>Guardar Secção:</b> Shift + Enter</p>
+    </mat-card>
+  </div>
+  <div>
+    <app-file-upload
+      class="file-upload-component"
+      (fileAsTxtEvent)="onFileUpload($event)"
+    ></app-file-upload>
+  </div>
+
+  <div class="type-of-proposal-container">
+    <div class="type-of-proposal-selection">
+      <app-type-of-proposal-selection
+        class="type-of-proposal-component"
+        (typeOfProposalChange)="onTypeOfProposalsChange($event)"
+        (sectionChange)="onSectionChange($event)"
+      ></app-type-of-proposal-selection>
+    </div>
+  </div>
+
+  <mat-tab-group animationDuration="0ms" dynamicHeight>
+    <mat-tab label="Bloquear Texto"
+      ><ng-container *ngTemplateOutlet="textBlockTemplate"></ng-container
+    ></mat-tab>
+    <mat-tab label="Selecionar Texto"
+      ><ng-container *ngTemplateOutlet="textSelectionTemplate"></ng-container
+    ></mat-tab>
+  </mat-tab-group>
+
+  <ng-template #textSelectionTemplate>
+    <div class="text-selection-container">
+      <app-titles-selection
+        class="text-selection-component"
+        [fileContent]="textToShow"
+        [topicToSearch]="highlightedSection.selectedSection"
+        (hierarchizeTextEvent)="onHierarchizeText($event)"
+      ></app-titles-selection></div
+  ></ng-template>
+
+  <ng-template #textBlockTemplate>
+    <div class="full-selection-container">
+      <div class="text-selection-container">
+        <app-text-selection
+          class="text-selection-component"
+          [textAsArray]="textToShow"
+          [topicToSearch]="highlightedSection.selectedSection"
+          (textSelectEvent)="highlightedText($event)"
+          (textSelectEventAsNumeric)="highlightedTextAsNumeric($event)"
+        ></app-text-selection>
+      </div>
+      <div>
+        <app-document-section-view
+          [highlightedSection]="highlightedSection"
+          [selectedSection]="sectionToSubmit"
+          (submit)="onSubmitSection($event)"
+        ></app-document-section-view>
+      </div>
+
+      <app-saved-section
+        *ngIf="savedDocumentSections.length > 0"
+        [savedSections]="savedDocumentSections"
+      ></app-saved-section>
+    </div>
+  </ng-template>
+</div>

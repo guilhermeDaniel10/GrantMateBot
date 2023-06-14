@@ -1,0 +1,63 @@
+<div class="message-container">
+  <div
+    class="message-content"
+    [ngClass]="mainMessage.fromBot == true ? 'bot-message' : 'user-message'"
+  >
+    <div>
+      <span
+        class="message-content-span"
+        #contentSpan
+        [innerHTML]="messageContent"
+      ></span>
+    </div>
+    <div *ngIf="wholeMessageRendered">
+      <div *ngIf="customizableText">
+        <app-custom-message-config
+          (submitCustomTextEvent)="onSubmitCustomText($event)"
+          [customizableText]="customizableText"
+        ></app-custom-message-config>
+      </div>
+      <div *ngIf="mainMessage.serviceCall">
+        <app-service-call-display-message
+          [serviceMessage]="serviceMessage"
+          [selectable]="shouldHighlightText"
+          (submitSelectedInfo)="onSubmitSelectedInfo($event)"
+        ></app-service-call-display-message>
+      </div>
+      <div *ngIf="mainMessage.dropdown">
+        <app-dropdown-config
+          [dropdownConfigs]="mainMessage.dropdown"
+          (dropdownSelectionEvent)="onDropdownSelectionEvent($event)"
+        ></app-dropdown-config>
+      </div>
+      <div *ngIf="mainMessage.openField">
+        <app-open-field-config
+          (openFieldEvent)="onOpenFieldEvent($event)"
+        ></app-open-field-config>
+      </div>
+      <div
+        class="decision-buttons-container"
+        *ngIf="!mainMessage.fromBot && decisionButtonEnabled"
+      >
+        <div>
+          <button
+            type="button"
+            class="decision-button submit-button"
+            (click)="onDecisionEvent(true)"
+          >
+            Submit
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="decision-button cancel-button"
+            (click)="onDecisionEvent(false)"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

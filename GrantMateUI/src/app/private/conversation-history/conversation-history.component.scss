@@ -1,0 +1,96 @@
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  width: 70%;
+  flex-basis: 15%;
+}
+
+
+
+.new-conversation-button {
+  width: 100%;
+  margin-top: 25px;
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 11px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b1b1b1;
+  border-radius: 10px;
+}
+
+.history-list-container {
+  overflow-y: auto;
+  flex-basis: 75%;
+  width: 100%;
+}
+
+@media screen and (max-height: 680px) {
+  .conversation-item {
+    height: 13% !important;
+  }
+}
+
+.conversation-item {
+  width: 100%;
+  height: 10%;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.conversation-item:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: var(--primary-hover-color);
+}
+
+.conversation-text {
+  color: white;
+  width: 100%;
+}
+
+.copyright-span {
+  padding-left: 20px;
+}
+.copyright-info {
+  width: 100%;
+  flex: 1;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  align-items: end;
+}
+
+.copyright-icon {
+  vertical-align: top;
+  font-size: 10px;
+  text-align: center;
+  width: auto;
+}

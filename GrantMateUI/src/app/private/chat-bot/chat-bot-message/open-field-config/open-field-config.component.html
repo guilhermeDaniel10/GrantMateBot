@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <textarea class="full-text-area" [(ngModel)]="openFieldMessage"> </textarea>
+  </div>
+  <div *ngIf="enabledSubmitButton">
+    <button class="submit-button-bot" (click)="onOpenFieldEvent()">
+      Submit
+    </button>
+  </div>
+</div>

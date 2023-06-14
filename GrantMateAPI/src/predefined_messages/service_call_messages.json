@@ -1,0 +1,21 @@
+{
+  "serviceCall": [
+    {
+      "nameId": "FIND_RELEVANT_INFORMATION_K_SEARCH",
+      "endpoint": "/embeddings/query",
+      "payload": {
+        "text": "{{TOPIC}}",
+        "k_number": "{{K_NUMBER}}"
+      }
+    },
+    {
+      "nameId": "TEXT_GENERATION_OPENAI",
+      "endpoint": "/gpt/generate-text",
+      "payload": {
+        "TOPIC": "{{TOPIC}}",
+        "SELECTED_INFORMATION": "{{SELECTED_INFORMATION}}",
+        "THEME": "{{THEME}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-select
+    [ngModel]="selectedTypeOfText"
+    (ngModelChane)="(selectedTypeOfText)"
+    placeholder="Tag"
+  >
+    <mat-option *ngFor="let typeOfText of typesOfText" [value]="typeOfText">
+      {{ typeOfText }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

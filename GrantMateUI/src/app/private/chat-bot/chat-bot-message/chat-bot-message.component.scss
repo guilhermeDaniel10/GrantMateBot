@@ -1,0 +1,86 @@
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-content {
+  padding: 12px;
+  min-height: 40px;
+  width: 40%;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-content-span {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1000px) {
+  .message-content {
+    width: 100%;
+  }
+}
+
+.bot-message {
+  background-color: #f5f5f5;
+  border-radius: 10px 10px 10px 0px;
+  color: var(--primary-color) !important;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: var(--primary-color);
+  border-radius: 10px 10px 0px 10px;
+  color: white !important;
+}
+
+.decision-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  color: var(--primary-color);
+}
+
+.cancel-button {
+  color: var(--warning);
+}
+
+.decision-button {
+  border: none;
+  width: 90px;
+  background-color: white;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  padding: 5px;
+}
+
+.decision-button:active {
+  opacity: 0.3;
+  color: white;
+}
+
+.checkbox-container {
+  text-align: end;
+}
+
+.checkbox-input:hover {
+  cursor: pointer;
+}
+.highlighted {
+  color: #00a4a9;
+}
+
+.unhighlight {
+  color: var(--primary-color);
+}
+
+.pointer {
+  cursor: pointer;
+}

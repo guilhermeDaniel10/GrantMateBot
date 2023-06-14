@@ -1,0 +1,167 @@
+{
+  "dropdownMessages": [
+    {
+      "nameId": "PURPOSE_SELECTION_DROPDOWN",
+      "values": [
+        {
+          "nameId": "PURPOSE_SELECTION_DROPDOWN_GENERATE_TEXT",
+          "content": "Generate text based on existing topics."
+        },
+        {
+          "nameId": "PURPOSE_SELECTION_DROPDOWN_QUERY_TOPICS",
+          "content": "Query topics based on keywords."
+        },
+        {
+          "nameId": "PURPOSE_SELECTION_DROPDOWN_OPEN_TEXT",
+          "content": "Open text."
+        }
+      ],
+      "asButton": true
+    },
+    {
+      "nameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN",
+      "values": [
+        {
+          "nameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN_EUROSTARS",
+          "content": "Eurostars"
+        },
+        {
+          "nameId": "TYPE_OF_PROPOSAL_SELECTION_DROPDOWN_HORIZON",
+          "content": "Horizon"
+        }
+      ],
+      "asButton": true
+    },
+    {
+      "nameId": "TOPIC_SELECTION_EUROSTARS_DROPDOWN",
+      "values": [
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_EUROSTARS_STATEOFART",
+          "content": "State-of-the-art"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_EUROSTARS_WHATYOUWANTTODO",
+          "content": "What do you want to do"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_EUROSTARS_HOWMAKEMONEY",
+          "content": "How will you make money"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_EUROSTARS_NONE",
+          "content": "None"
+        }
+      ]
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_DROPDOWN",
+      "values": [
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_EXCELLENCE",
+          "content": "Excellence"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_IMPACT",
+          "content": "Impact"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_IMPLEMENTATION",
+          "content": "Implementation"
+        },
+        {
+          "nameId": "TOPIC_SELECTION_DROPDOWN_HORIZON_NONE",
+          "content": "None"
+        }
+      ],
+      "asButton": true
+    },
+
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_EXCELLENCE_DROPDOWN",
+      "values": [
+        {
+          "nameId": "EXCELLENCE_AMBITION",
+          "content": "Ambition"
+        },
+        {
+          "nameId": "EXCELLENCE_SMART_OBJECTIVES",
+          "content": "SMART objectives"
+        },
+        {
+          "nameId": "EXCELLENCE_STATEOFART",
+          "content": "State-of-the-art"
+        },
+        {
+          "nameId": "EXCELLENCE_GENDERDIMENSIONANDETHICS",
+          "content": "Gender dimension and Ethics"
+        },
+        {
+          "nameId": "EXCELLENCE_OPENSCIENCE",
+          "content": "Open Science"
+        },
+        {
+          "nameId": "EXCELLENCE_DATAMANAGEMENT",
+          "content": "Data Management"
+        },
+        {
+          "nameId": "EXCELLENCE_NONE",
+          "content": "None"
+        }
+      ]
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_IMPACT_DROPDOWN",
+      "values": [
+        {
+          "nameId": "IMPACT_KNOWLEDGEIPRMANAGEMENT",
+          "content": "Knowledge, IPR Management"
+        },
+        {
+          "nameId": "IMPACT_MEASUREDTOMAXIMISE",
+          "content": "Measures to maximize impact"
+        },
+        {
+          "nameId": "IMPACT_TARGETGROUPS",
+          "content": "Target groups and stakeholders"
+        },
+        {
+          "nameId": "IMPACT_COMMUNICATIONACTIVITIES",
+          "content": "Communication activities"
+        },
+        {
+          "nameId": "IMPACT_STANDARTISATIONACTIVITIES",
+          "content": "Standartisation activities"
+        },
+        {
+          "nameId": "IMPACT_EXPLOITATION",
+          "content": "Exploitation and commercialization"
+        },
+        {
+          "nameId": "IMPACT_NONE",
+          "content": "None"
+        }
+      ]
+    },
+    {
+      "nameId": "TOPIC_SELECTION_HORIZON_IMPLEMENTATION_DROPDOWN",
+      "values": [
+        {
+          "nameId": "IMPLEMENTATION_WORKPLANDESCRIPTION",
+          "content": "Workplan Description"
+        },
+        {
+          "nameId": "IMPLEMENTATION_WORKPLANANDTASKDESCRIPTION",
+          "content": "Workplan and Tasks Description"
+        },
+        {
+          "nameId": "IMPLEMENTATION_CAPACITYCONSORTIUM",
+          "content": "Capacity of the Consortium"
+        },
+        {
+          "nameId": "IMPLEMENTATION_NONE",
+          "content": "None"
+        }
+      ]
+    }
+  ]
+}

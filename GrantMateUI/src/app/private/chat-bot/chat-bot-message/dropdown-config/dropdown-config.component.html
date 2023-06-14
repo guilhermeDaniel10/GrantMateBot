@@ -1,0 +1,30 @@
+<div *ngIf="!dropdownConfigs.asButton; else dropdownAsButton">
+  <select
+    #dropdownSelect
+    class="message-dropdown"
+    (change)="onDropdownSelectionEvent($event)"
+  >
+    <option value="" disabled selected><b>Select an option</b></option>
+
+    <option
+      class="select-option"
+      *ngFor="let option of dropdownConfigs.dropdownValues"
+      [value]="option.nameId"
+    >
+      {{ option.content }}
+    </option>
+  </select>
+</div>
+
+<ng-template #dropdownAsButton>
+  <div class="message-buttons">
+    <div
+      *ngFor="let option of dropdownConfigs.dropdownValues"
+      class="button-container"
+    >
+      <button [disabled]="disabled" class="button" (click)="onDropdownButtonSelectionEvent(option)">
+        <b>{{ option.content }}</b>
+      </button>
+    </div>
+  </div>
+</ng-template>

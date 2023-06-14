@@ -1,0 +1,29 @@
+.side-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.side-nav-container {
+  height: 100%;
+  position: absolute;
+  width: 260px;
+  border-radius: 0px 8px 8px 0px;
+  transition: opacity 0.3s;
+  
+}
+
+.side-nav-drawer {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+.side-nav-close {
+}
+
+.icon {
+  color: var(--primary-color);
+}
+
+.no-backdrop {
+  visibility: hidden;
+  transition: opacity 0.3s;
+}

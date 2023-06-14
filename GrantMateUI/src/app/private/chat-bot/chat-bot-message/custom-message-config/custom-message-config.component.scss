@@ -1,0 +1,28 @@
+.full-text-area {
+  height: 200px;
+  width: 100%;
+}
+
+textarea {
+  color: var(--primary-color);
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  border-radius: 5px;
+  border-color: var(--field-color);
+}
+
+.submit-button {
+  width: 90px;
+  background-color: white;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  color: var(--sucess);
+  padding: 5px;
+  border: none;
+}
+
+.submit-button:active {
+  opacity: 0.3;
+  color: white;
+}

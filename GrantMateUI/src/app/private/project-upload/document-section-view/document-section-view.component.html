@@ -1,0 +1,84 @@
+<div class="document-section-container">
+  <div class="options-container">
+    <div class="grid-container">
+      <div class="title-column">
+        <div class="title-container">
+          <mat-card class="card-container">
+            <div class="title-title">
+              <div class="title-title-container">
+                <p class="title">
+                  <b>Título</b>
+                  <button
+                    class="blocking-button"
+                    mat-stroked-button
+                    (click)="headingBlock()"
+                  >
+                    Bloquear
+                  </button>
+                </p>
+              </div>
+              <div class="reset-button">
+                <button mat-icon-button (click)="resetHeadingBlock()">
+                  <mat-icon class="delete-icon">delete icon</mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="title-info">
+              <textarea
+                class="small full-text-area"
+                [(ngModel)]="selectedValues.selectedHeading"
+              >
+              </textarea>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+      <div class="paragraph-column">
+        <div class="paragraph-container">
+          <mat-card class="card-container">
+            <div class="title-title">
+              <div class="title-title-container">
+                <p class="title">
+                  <b>Corpo de Texto</b>
+                  <button
+                    class="blocking-button"
+                    mat-stroked-button
+                    (click)="paragraphBlock()"
+                  >
+                    Bloquear
+                  </button>
+                </p>
+              </div>
+              <div class="reset-button">
+                <button mat-icon-button (click)="resetParagraphBlock()">
+                  <mat-icon class="delete-icon">delete icon</mat-icon>
+                </button>
+              </div>
+            </div>
+            <div class="paragraph-info">
+              <textarea
+                class="small full-text-area"
+                [(ngModel)]="selectedValues.selectedParagraph"
+              >
+              </textarea>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-options">
+    <div class="options">
+      <div class="option submit">
+        <button class="save-button" mat-flat-button (click)="onSubmit()">
+          Guardar
+        </button>
+      </div>
+      <div class="option reset">
+        <button mat-flat-button color="warn" (click)="resetSelectedValues()">
+          Repor
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

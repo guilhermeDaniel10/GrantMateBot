@@ -1,0 +1,39 @@
+<div
+  *ngFor="let serviceResponse of serviceMessage"
+  [ngClass]="
+    selectable && serviceResponse === selectedText
+      ? 'highlighted'
+      : 'unhighlight'
+  "
+>
+  <div *ngIf="selectable" class="checkbox-container">
+    <div *ngIf="serviceResponse != selectedText; else checkBox">
+      <label (click)="onSelectedText(serviceResponse)">
+        <input class="checkbox-input" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <ng-template #checkBox>
+      <label (click)="unSelectText()">
+        <input class="checkbox-input" type="checkbox" checked="checked" />
+        <span class="checkmark"></span>
+      </label>
+    </ng-template>
+  </div>
+  <app-service-output-config
+    class="service-output-config"
+    [ngClass]="{ pointer: selectable }"
+    (click)="onSelectedText(serviceResponse)"
+    [serviceOutputValueConfig]="serviceResponse"
+  ></app-service-output-config>
+</div>
+
+<div *ngIf="selectable" class="selected-text-button-container">
+  <button
+    type="button"
+    class="submit-button-bot"
+    (click)="onSubmitSelectedInfo()"
+  >
+    Submit
+  </button>
+</div>

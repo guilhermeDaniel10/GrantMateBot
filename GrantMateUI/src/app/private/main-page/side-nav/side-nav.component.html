@@ -1,0 +1,21 @@
+<div class="side-buttons">
+  <div *ngIf="showCloseButton" class="side-nav-close">
+    <button mat-icon-button (click)="closeSideNav()">
+      <mat-icon class="icon">close</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="showMenuButton" class="side-nav-button">
+    <button mat-icon-button (click)="openSideNav()">
+      <mat-icon class="icon">menu</mat-icon>
+    </button>
+  </div>
+</div>
+<mat-drawer-container
+  [ngClass]="{ 'no-backdrop': !showSideNav }"
+  class="side-nav-container"
+  autosize
+>
+  <mat-drawer class="side-nav-drawer" #drawer [(opened)]="showSideNav">
+    <app-conversation-history></app-conversation-history>
+  </mat-drawer>
+</mat-drawer-container>
