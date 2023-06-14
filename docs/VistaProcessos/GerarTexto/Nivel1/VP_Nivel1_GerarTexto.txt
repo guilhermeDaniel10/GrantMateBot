@@ -1,0 +1,20 @@
+@startuml
+skinparam activityArrowFontSize 15
+skinparam ParticipantPadding 1
+title Gerar texto
+
+actor User as US
+participant "Sistema GrantMate" as SYS
+participant "OpenAI" as API
+
+US -> SYS : Escreve um prompt para\ngerar algo a partir do\ndataset de propostas
+activate US 
+activate SYS
+SYS -> API : Envia pedido com o prompt
+activate API
+API --> SYS : Recebe o texto gerado
+deactivate API
+SYS --> US : Mostra o texto gerado
+deactivate US
+deactivate SYS
+@enduml

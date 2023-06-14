@@ -1,0 +1,28 @@
+@startuml
+skinparam activityArrowFontSize 15
+skinparam ParticipantPadding 1
+title Gerar Texto
+
+participant GrantMateUI as UI
+participant GrantMateAPI as API
+participant GPTBot as BOT
+participant OpenAIAPI as OPEN
+
+
+UI -> API : POST(api/v1/gpt/generate)
+activate UI
+activate API
+API -> BOT: Kafka Producer(prompt)
+activate BOT
+BOT -> BOT : Tratamento de dados
+BOT -> OPEN : Generate
+activate OPEN
+OPEN --> BOT : Gen success
+deactivate OPEN
+BOT --> API : Kafka Consumer(success)
+deactivate BOT
+API --> UI : OK 201: Mostra o texto\ngerado
+deactivate API
+deactivate UI
+
+@enduml

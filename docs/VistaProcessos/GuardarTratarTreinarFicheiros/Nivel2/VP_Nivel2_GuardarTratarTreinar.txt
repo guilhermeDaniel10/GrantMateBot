@@ -1,0 +1,28 @@
+@startuml
+skinparam activityArrowFontSize 15
+skinparam ParticipantPadding 1
+title Guardar, tratar e treinar ficheiros
+
+participant GrantMateUI as UI
+participant GrantMateAPI as API
+participant GPTBot as BOT
+participant OpenAIAPI as OPEN
+
+
+UI -> API : POST(api/v1/file/train)
+activate UI
+activate API
+API -> BOT: Kafka Producer(filename)
+activate BOT
+BOT -> BOT : Tratamento de dados
+BOT -> OPEN : Fine Tune
+activate OPEN
+OPEN --> BOT : Tune success
+deactivate OPEN
+BOT --> API : Kafka Consumer(success)
+deactivate BOT
+API --> UI : OK 201: Sucesso
+deactivate API
+deactivate UI
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+skinparam activityArrowFontSize 15
+skinparam ParticipantPadding 1
+title Guardar, tratar e treinar ficheiros
+
+actor User as US
+participant "Sistema GrantMate" as SYS
+participant "OpenAI" as API
+
+US -> SYS : Carrega ficheiro para\ntreinar o modelo
+activate US
+activate SYS
+SYS -> SYS : Guarda o ficheiro\ne faz o tratamento\ndos dados
+SYS -> API : Treina o modelo
+activate API
+API --> SYS : Informa o sucesso\ndo treino
+deactivate API
+SYS --> US : Ficheiro guardado e\nmodelo treinado
+deactivate US
+deactivate SYS
+
+@enduml
