@@ -1,0 +1,5 @@
+Primeiro, é necessário adicionar a biblioteca nova aos requirements.txt.
+
+Para não ser preciso fazer o rebuild todo de novo e ter que esperar que todas as bibliotecas façam download, faz o seguinte:
+
+docker exec gptbot pip install biblioteca

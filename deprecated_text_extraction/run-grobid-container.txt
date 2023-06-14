@@ -1,0 +1,7 @@
+docker pull grobid/grobid:0.7.2
+
+docker run -p 8080:8070 -d lfoppiano/grobid:0.7.2
+
+--expose 8080
+
+curl -v --form input=@"C:\Users\Guilherme Daniel\Desktop\ProposalsGrantMate\Example project proposals\Eurostars\Z-Book-submission-2020-02-13.pdf" http://localhost:8070/api/processFulltextDocument?output=tei

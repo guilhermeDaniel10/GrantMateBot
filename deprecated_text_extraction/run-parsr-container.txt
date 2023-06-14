@@ -1,0 +1,23 @@
+docker pull axarev/parsr
+
+docker pull axarev/parsr-ui-localhost (OPTIONAL)
+
+docker run -p 3001:3001 axarev/parsr
+
+docker run -t -p 8080:80 axarev/parsr-ui-localhost:latest (OPTIONAL)
+
+
+curl -X POST http://localhost:3001/api/v1/document -H "Content-Type: multipart/form-data" -F "file=@"C:\Users\guilh\OneDrive\Desktop\GrantMate\GrantMate\DummyFiles\Celtic Plus\Health_5G_Celtic-Plus-Proposal_FINAL.pdf";type=application/pdf" -F "config=@/path/to/config.json;type=application/json"
+
+curl -v --form input=@"C:\Users\guilh\OneDrive\Desktop\GrantMate\GrantMate\DummyFiles\Celtic Plus\Health_5G_Celtic-Plus-Proposal_FINAL.pdf;type=application/pdf" http://localhost:3001/api/v1/document
+
+
+
+docker pull axarev/parsr
+
+docker pull axarev/parsr-ui-localhost
+
+
+docker run -p 3001:3001 axarev/parsr
+
+docker run -t -p 8080:80 axarev/parsr-ui-localhost:latest
